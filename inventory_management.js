@@ -35,3 +35,14 @@ function updateStock(product, unitSold) {
         console.log("Out of Stock");
     }
 }
+
+// Task 4: Create a Function to Check Low Stock Products
+
+function checkLowStock(inventoryArray) {
+
+    for (let i = 0; i < inventoryArray.length; i++) {
+        if (inventoryArray[i]['Quantity'] < inventoryArray[i]['lowStockLevel']) {
+            console.log(inventoryArray[i]['Name'] + " is Low Stock");
+        }
+    }
+}
