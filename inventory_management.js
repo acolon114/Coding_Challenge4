@@ -8,4 +8,14 @@ const inventory = [
     { Name: 'Headphones', Price: 100, Quantity: 15, lowStockLevel: 5 },
     { Name: 'Smartwatch', Price: 250, Quantity: 3, lowStockLevel: 1 }
      ];
- 
+     
+ //Task 2: Create a Function to Display Product Details
+
+function displayProductDetails(product) { 
+    
+    console.log("Name: " + product['Name']);
+    console.log ("Price: " + product['Price']);
+    console.log ("Quantity: " + product['Quantity']);
+    
+    (product['Quantity'] > product['lowStockLevel']) ? console.log("In Stock") : console.log("Low Stock");
+}
