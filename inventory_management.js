@@ -59,3 +59,21 @@ function calculateInventoryValue(inventoryArray) {
     }
     return sum;
 }
+
+// Task 6: Create a Function to Process a Sale
+
+function processSale(inventoryArray, productName, unitSold) {
+    
+    let selectedProduct = inventoryArray.find(function(element) {
+        return element.Name === productName;
+    });
+
+    if (selectedProduct) { 
+        updateStock(selectedProduct, unitSold);
+    } else { 
+        console.log("Selected Product is not in Inventory");
+    }
+}
+
+processSale(inventory, 'Laptop', 5); // Output: In Stock
+processSale(inventory, 'Fireworks', 20); // Output: Selected Product is not in Inventory
